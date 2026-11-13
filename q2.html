@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 2 - Validate Input</title>
+</head>
+<body>
+  <input type="text" id="userInput" placeholder="Enter a number">
+  <button onclick="checkInput()">Check</button>
+
+  <script>
+    function checkInput() {
+      // Get the value and remove extra spaces
+      let value = document.getElementById("userInput").value.trim();
+
+      // Empty input or not a valid number
+      if (value === "" || isNaN(value)) {
+        alert("Please insert a number!");
+      } else {
+        let number = Number(value);
+
+        if (number < 10) {
+          alert("The number is lower than 10");
+        } else if (number > 10) {
+          alert("The number is higher than 10");
+        } else {
+          alert("The number is equal to 10");
+        }
+      }
+    }
+  </script>
+</body>
+</html>
