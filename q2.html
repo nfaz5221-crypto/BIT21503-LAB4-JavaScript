@@ -11,10 +11,7 @@
 
   <script>
     function checkInput() {
-      // Get the value and remove extra spaces
       let value = document.getElementById("userInput").value.trim();
-
-      // Empty input or not a valid number
       if (value === "" || isNaN(value)) {
         alert("Please insert a number!");
       } else {
